@@ -1,0 +1,44 @@
+Found: NVIDIA (R) Nsight Compute Command Line Profiler
+Copyright (c) 2018-2025 NVIDIA Corporation
+Version 2025.3.1.0 (build 36398880) (public-release)
+Beginning kernel profiling...
+Profiling scalar_csr (bin/scalar_csr)...
+Loading matrix: datasets/original/test_small.mtx...
+Validation PASSED (max_abs_error = 0)
+Scalar CSR Summary for test_small (block256):
+  Mean Kernel: 269.532 ms (+/- 0)
+  Throughput:  4.45215e-08 GFLOP/s
+  Bandwidth:   5.7878e-07 GB/s
+Profiling vector_csr (bin/vector_csr)...
+Loading matrix: datasets/original/test_small.mtx...
+Validation PASSED (max_abs_error = 0)
+Vector CSR Summary for test_small (warps_per_block8_threads256):
+  Mean Kernel: 262.546 ms (+/- 0)
+  Throughput:  4.57062e-08 GFLOP/s
+  Bandwidth:   5.94181e-07 GB/s
+Profiling ell (bin/ell)...
+Loading matrix: datasets/original/test_small.mtx...
+ELLPACK format: rows=4, cols=4, ell_width=2, padding_ratio=1.33333
+Validation PASSED (max_abs_error = 0)
+ELLPACK Summary for test_small (ell_width2_block256):
+  Mean Kernel: 263.56 ms (+/- 0)
+  Throughput:  4.55305e-08 GFLOP/s
+  Bandwidth:   6.07073e-07 GB/s
+  Padding Ratio: 1.33333
+Profiling hyb (bin/hyb)...
+Loading matrix: datasets/original/test_small.mtx...
+HYB format: rows=4, cols=4, ell_width=2, total_nnz=6, ell_nnz=6, coo_overflow_nnz=0
+Validation PASSED (max_abs_error = 0)
+HYB Summary for test_small (hyb_ell_width2_block256):
+  Mean Kernel: 260.535 ms (+/- 0)
+  Throughput:  4.6059e-08 GFLOP/s
+  Bandwidth:   6.1412e-07 GB/s
+  Overflow NNZ:0 (0%)
+Profiling cusparse (bin/cusparse_spmv)...
+Loading matrix: datasets/original/test_small.mtx...
+Validation PASSED (max_abs_error = 0)
+cuSPARSE Summary for test_small (cusparse_default):
+  Mean Kernel: 523.141 ms (+/- 0)
+  Throughput:  2.29384e-08 GFLOP/s
+  Bandwidth:   2.98199e-07 GB/s
+Profiling finished. Results saved to results/profiling.

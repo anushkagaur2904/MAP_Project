@@ -1,0 +1,70 @@
+================================================================================
+                 TEAM 7 HARDWARE & ENVIRONMENT SPECIFICATION                   
+================================================================================
+Date: Wed Nov 11 04:38:40 AM UTC 2026
+Hostname: 10be6ebc7962
+Kernel: Linux 6.6.159+ x86_64
+
+--------------------------------------------------------------------------------
+1. GPU SPECIFICATIONS (via nvidia-smi)
+--------------------------------------------------------------------------------
+Wed Nov 11 04:38:40 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.82.07              Driver Version: 580.82.07      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla T4                       Off |   00000000:00:04.0 Off |                    0 |
+| N/A   41C    P8             13W /   70W |       0MiB /  15360MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+Detailed GPU Properties:
+name, driver_version, memory.total [MiB], memory.free [MiB], power.limit [W], clocks.max.sm [MHz], clocks.max.memory [MHz], compute_cap
+Tesla T4, 580.82.07, 15360 MiB, 14913 MiB, 70.00 W, 1590 MHz, 5001 MHz, 7.5
+
+--------------------------------------------------------------------------------
+2. CUDA & TOOLKIT SPECIFICATIONS
+--------------------------------------------------------------------------------
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Aug_20_01:58:59_PM_PDT_2025
+Cuda compilation tools, release 13.0, V13.0.88
+Build cuda_13.0.r13.0/compiler.36424714_0
+
+--------------------------------------------------------------------------------
+3. CPU & SYSTEM MEMORY SPECIFICATIONS
+--------------------------------------------------------------------------------
+CPU Model: Intel(R) Xeon(R) CPU @ 2.00GHz
+CPU Cores: 2
+Architecture: x86_64
+
+Memory Info:
+               total        used        free      shared  buff/cache   available
+Mem:            12Gi       1.4Gi       6.9Gi       2.9Mi       4.7Gi        11Gi
+Swap:             0B          0B          0B
+
+--------------------------------------------------------------------------------
+4. PROFILING & BENCHMARK TOOLS (Nsight Compute)
+--------------------------------------------------------------------------------
+NVIDIA (R) Nsight Compute Command Line Profiler
+Copyright (c) 2018-2025 NVIDIA Corporation
+Version 2025.3.1.0 (build 36398880) (public-release)
+
+--------------------------------------------------------------------------------
+5. COMPILER & BUILD FLAGS
+--------------------------------------------------------------------------------
+g++ version: g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+Standard CPU CXXFLAGS: -O3 -std=c++17 -Wall -Wextra
+Standard CUDA NVCCFLAGS: -O3 -std=c++17 -gencode arch=compute_70..89
+================================================================================
