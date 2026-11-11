@@ -38,11 +38,17 @@ if command -v nvcc &> /dev/null; then
     fi
 
     NVCC_FLAGS="-O3 -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra"
-    # Universal compute capabilities for Google Colab (T4: 75, V100: 70, A100: 80, L4: 89)
-    GENCODE="-gencode arch=compute_70,code=sm_70 \
-             -gencode arch=compute_75,code=sm_75 \
-             -gencode arch=compute_80,code=sm_80 \
-             -gencode arch=compute_89,code=sm_89"
+    # Auto-detect target architecture from nvidia-smi if available, otherwise target T4 (sm_75) and newer architectures
+    if [ -n "$GPU_NAME" ]; then
+        CCAP=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -n 1 | tr -d '. \r')
+        if [ -n "$CCAP" ]; then
+            echo "  -> Targeting detected GPU compute capability: sm_${CCAP}"
+            GENCODE="-gencode arch=compute_${CCAP},code=sm_${CCAP}"
+        fi
+    fi
+    if [ -z "$GENCODE" ]; then
+        GENCODE="-gencode arch=compute_75,code=sm_75 -gencode arch=compute_80,code=sm_80 -gencode arch=compute_89,code=sm_89"
+    fi
 
     COMMON_OBJS="src/common/matrix_loader.cpp src/common/correctness.cpp src/common/benchmark.cpp"
 
