@@ -1,0 +1,14 @@
+matrix_id,relative_path,category,group,name
+appu,datasets/original/appu.mtx,graph,Simon,appu
+uni_chimera_i4,datasets/original/uni_chimera_i4.mtx,large,FlowIPM22,uni_chimera_i4
+soc_sign_slashdot,datasets/original/soc-sign-Slashdot090221.mtx,graph,SNAP,soc-sign-Slashdot090221
+wy2010,datasets/original/wy2010.mtx,graph,DIMACS10,wy2010
+mixtank_new,datasets/original/mixtank_new.mtx,cfd,POLYFLOW,mixtank_new
+Goodwin_071,datasets/original/Goodwin_071.mtx,cfd,Goodwin,Goodwin_071
+bbmat,datasets/original/bbmat.mtx,cfd,Simon,bbmat
+ns3Da,datasets/original/ns3Da.mtx,cfd,FEMLAB,ns3Da
+sparsine,datasets/original/sparsine.mtx,structural,GHS_indef,sparsine
+bcsstk35,datasets/original/bcsstk35.mtx,structural,Boeing,bcsstk35
+av41092,datasets/original/av41092.mtx,2d_3d,Vavasis,av41092
+TSOPF_FS_b39_c19,datasets/original/TSOPF_FS_b39_c19.mtx,power_network,TSOPF,TSOPF_FS_b39_c19
+qpband,datasets/original/qpband.mtx,banded,GHS_indef,qpband

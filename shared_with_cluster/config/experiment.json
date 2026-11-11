@@ -1,0 +1,33 @@
+{
+  "matrix_config": "config/matrices.csv",
+  "formats": [
+    "coo",
+    "csr",
+    "ell"
+  ],
+  "modes": [
+    "seq",
+    "omp"
+  ],
+  "schedules": [
+    "static",
+    "dynamic",
+    "guided"
+  ],
+  "threads": [
+    1,
+    4,
+    8
+  ],
+  "chunks": [
+    16
+  ],
+  "runs": 6,
+  "warmup_runs": 1,
+  "max_ell_padding_ratio": 20.0,
+  "timeout_seconds": 3600,
+  "proc_bind": [
+    "false"
+  ],
+  "repetitions": 100
+}

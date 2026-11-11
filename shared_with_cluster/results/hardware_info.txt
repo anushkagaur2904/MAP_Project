@@ -1,0 +1,38 @@
+================================================================================
+                 TEAM 7 HARDWARE & ENVIRONMENT SPECIFICATION                   
+================================================================================
+Date: Sat Nov  7 11:29:58 IST 2026
+Hostname: apples-MacBook-Pro.local
+Kernel: Darwin 24.6.0 x86_64
+
+--------------------------------------------------------------------------------
+1. GPU SPECIFICATIONS (via nvidia-smi)
+--------------------------------------------------------------------------------
+nvidia-smi: Not available in current environment (CPU only / macOS dev environment).
+
+--------------------------------------------------------------------------------
+2. CUDA & TOOLKIT SPECIFICATIONS
+--------------------------------------------------------------------------------
+nvcc: Not found in PATH.
+
+--------------------------------------------------------------------------------
+3. CPU & SYSTEM MEMORY SPECIFICATIONS
+--------------------------------------------------------------------------------
+CPU Model: Intel(R) Core(TM) i7-8557U CPU @ 1.70GHz
+Logical Cores: 8
+Physical Cores: 4
+System RAM: 16 GB
+
+--------------------------------------------------------------------------------
+4. PROFILING & BENCHMARK TOOLS (Nsight Compute)
+--------------------------------------------------------------------------------
+Nsight Compute (ncu): Not detected. Hardware counter profiling unavailable.
+
+--------------------------------------------------------------------------------
+5. COMPILER & BUILD FLAGS
+--------------------------------------------------------------------------------
+g++ version: Apple clang version 17.0.0 (clang-1700.0.13.5)
+clang++ version: Apple clang version 17.0.0 (clang-1700.0.13.5)
+Standard CPU CXXFLAGS: -O3 -std=c++17 -Wall -Wextra
+Standard CUDA NVCCFLAGS: -O3 -std=c++17 -gencode arch=compute_70..89
+================================================================================

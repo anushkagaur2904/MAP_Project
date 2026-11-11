@@ -1,0 +1,5 @@
+{
+  "stream_bandwidth_gbs": 12.7907,
+  "peak_gflops": 0,
+  "notes": "Measured STREAM Triad bandwidth: 12.7907 GB/s at 6 threads. FP64 peak is not established; compute ceiling intentionally omitted."
+}

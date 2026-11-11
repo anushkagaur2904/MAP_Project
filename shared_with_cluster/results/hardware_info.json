@@ -1,0 +1,6 @@
+{
+  "gpu_name": "NVIDIA GPU",
+  "peak_bandwidth_gbs": 320.0,
+  "peak_fp64_gflops": 254.0,
+  "collected_date": "Sat Nov  7 11:29:58 IST 2026"
+}
